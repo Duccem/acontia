@@ -1,0 +1,3 @@
+{
+  "extends": "@acontia/config/tsconfig.base.json"
+}

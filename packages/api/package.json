@@ -1,0 +1,29 @@
+{
+  "name": "@acontia/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@acontia/auth": "workspace:*",
+    "@acontia/db": "workspace:*",
+    "@acontia/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "dotenv": "catalog:",
+    "next": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acontia/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
