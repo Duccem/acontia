@@ -1,0 +1,36 @@
+{
+  "name": "@acontia/emails",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*.ts"
+    },
+    "./templates/*": {
+      "default": "./src/templates/*.tsx"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "email dev --dir ./src/lib/emails/templates --port 3002"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@acontia/config": "workspace:*"
+  },
+  "peerDependencies": {
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "dotenv": "catalog:",
+    "zod": "catalog:",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-email": "5.2.5",
+    "resend": "6.8.0"
+  }
+}

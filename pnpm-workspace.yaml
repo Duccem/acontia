@@ -1,6 +1,6 @@
 packages:
-  - apps/*
-  - packages/*
+  - src/apps/*
+  - src/packages/*
 catalog:
   dotenv: ^17.2.2
   zod: ^4.1.13
@@ -12,3 +12,4 @@ catalog:
   "@orpc/zod": ^1.12.2
   better-auth: ^1.4.9
   "@polar-sh/better-auth": ^1.6.4
+

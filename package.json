@@ -2,8 +2,8 @@
   "name": "acontia",
   "private": true,
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "src/apps/*",
+    "src/packages/*"
   ],
   "type": "module",
   "scripts": {

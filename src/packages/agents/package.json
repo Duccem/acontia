@@ -1,0 +1,27 @@
+{
+  "name": "@acontia/agents",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@acontia/auth": "workspace:*",
+    "@acontia/db": "workspace:*",
+    "@acontia/env": "workspace:*",
+    "ai": "6.0.42",
+    "@ai-sdk/google": "3.0.10",
+    "dotenv": "catalog:",
+    "next": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@acontia/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
