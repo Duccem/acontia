@@ -1,0 +1,33 @@
+{
+  "name": "@helsa/workflows",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "default": "./src/*.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {},
+  "devDependencies": {
+    "@acontia/config": "workspace:*",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@acontia/db": "workspace:*",
+    "@acontia/env": "workspace:*",
+    "@acontia/auth": "workspace:*",
+    "@ai-sdk/google": "3.0.10",
+    "@polar-sh/sdk": "^0.42.2",
+    "ai": "6.0.42",
+    "better-auth": "catalog:",
+    "date-fns": "4.1.0",
+    "dotenv": "catalog:",
+    "drizzle-orm": "^0.45.1",
+    "inngest": "3.49.3",
+    "zod": "catalog:"
+  }
+}
