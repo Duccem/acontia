@@ -84,6 +84,9 @@ export const organization = pgTable(
     logo: text("logo"),
     metadata: text("metadata"),
     plan: text("plan").notNull().default("free"),
+    taxId: text('tax_id').unique().notNull(),
+    countryCode: text('country_code'),
+    currency: text('currency').default('USD'),
     createdAt: timestamp("created_at").defaultNow().notNull(),
   },
   (table) => [index("organization_slug_idx").on(table.slug)]
