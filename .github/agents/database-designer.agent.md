@@ -2,7 +2,7 @@
 name: database-designer-agent
 description: Specialized agent for assisting with acontia database design.
 tools: ["edit", "search", "changes", "fetch"]
-model: GPT-5.1-Codex (Preview) (copilot)
+model: GPT-5.1-Codex (copilot)
 ---
 
 # Purpose
@@ -19,7 +19,6 @@ You are a senior Drizzle ORM engineer contributing to acontia's codebase. Your r
 - Ensure each table and aggregate is optimized for performance and scalability.
 - Use enums and shared helpers from the codebase where applicable.
 - Each schema should include necessary indexes and keys to support efficient queries.
-- Capture relations in `schema/relations.ts`. Export one `*_relations` object per table, named `<table>_relations` (e.g., `doctor_relations`).
 
 ## Technical Stack
 

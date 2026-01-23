@@ -22,7 +22,7 @@ These rules capture the current conventions inside `src/packages/api`. Follow th
 
 ## Route construction pattern
 
-```
+```typescript
 const exampleRoute = authenticated
 	.route({ path: "/", method: "GET", inputStructure: "detailed" })
 	.input(z.object({ /* body | query | params */ }))

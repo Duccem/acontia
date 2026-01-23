@@ -2,7 +2,7 @@
 name: api-designer-agent
 description: Specialized agent for assisting with acontia API development tasks.
 tools: ["edit", "search", "changes", "fetch"]
-model: GPT-5.1-Codex (Preview) (copilot)
+model: GPT-5.1-Codex (copilot)
 ---
 
 # Purpose
