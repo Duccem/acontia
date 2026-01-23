@@ -11,6 +11,7 @@
     "@acontia/api": "workspace:*",
     "@acontia/auth": "workspace:*",
     "@acontia/env": "workspace:*",
+    "@acontia/ui": "workspace:*",
     "@base-ui/react": "^1.0.0",
     "@orpc/client": "catalog:",
     "@orpc/openapi": "catalog:",
