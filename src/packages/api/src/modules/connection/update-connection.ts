@@ -15,6 +15,10 @@ const inputSchema = z.object({
   }).partial(),
 });
 
+const outputSchema = z.object({
+  success: z.boolean(),
+});
+
 const errors = {
   CONNECTION_NOT_FOUND: {
     status: 404,
@@ -26,8 +30,9 @@ const errors = {
 }
 
 export const updateConnection = protectedProcedure
-  .route({ path: "/:id", method: "PUT", inputStructure: "detailed" })
+  .route({ path: "/:id", method: "PUT", inputStructure: "detailed", description: "Update a connection by its ID", summary: "Update Connection", tags: ["Connections"] })
   .input(inputSchema)
+  .output(outputSchema)
   .errors(errors)
   .handler(async ({ input, context, errors }) => {
     const { organization } = context;
@@ -54,4 +59,7 @@ export const updateConnection = protectedProcedure
         eq(connection.id, id),
         eq(connection.organizationId, organization.id)
       ));
+
+    return { success: true };
+
   });

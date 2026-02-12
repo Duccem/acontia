@@ -30,7 +30,7 @@ const errors = {
 }
 
 export const getConnectionById = protectedProcedure
-  .route({ path: "/:id", method: "GET", inputStructure: "detailed" })
+  .route({ path: "/:id", method: "GET", inputStructure: "detailed", description: "Get a connection by its ID", summary: "Get Connection", tags: ["Connections"] })
   .input(inputSchema)
   .output(outputSchema)
   .errors(errors)

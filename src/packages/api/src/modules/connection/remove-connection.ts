@@ -10,6 +10,10 @@ const inputSchema = z.object({
   })
 });
 
+const outputSchema = z.object({
+  success: z.boolean(),
+});
+
 const errors = {
   CONNECTION_NOT_FOUND: {
     status: 404,
@@ -20,8 +24,9 @@ const errors = {
   },
 }
 export const deleteConnection = protectedProcedure
-  .route({ path: "/:id", method: "DELETE", inputStructure: "detailed" })
+  .route({ path: "/:id", method: "DELETE", inputStructure: "detailed", description: "Delete a connection by its ID", summary: "Delete Connection", tags: ["Connections"] })
   .input(inputSchema)
+  .output(outputSchema)
   .errors(errors)
   .handler(async ({ input, context, errors }) => {
     const { organization } = context;
@@ -43,4 +48,6 @@ export const deleteConnection = protectedProcedure
         eq(connection.id, id),
         eq(connection.organizationId, organization.id)
       ));
+
+    return { success: true };
   });

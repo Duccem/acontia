@@ -28,7 +28,7 @@ const listConnectionsOutput = z.object({
 });
 
 export const listConnections = protectedProcedure
-  .route({ path: "/", method: "GET", inputStructure: "detailed" })
+  .route({ path: "/", method: "GET", inputStructure: "detailed", description: "List connections with pagination and optional filters", summary: "List Connections", tags: ["Connections"] })
   .input(z.object({
     query: listConnectionsFilters,
   }))
